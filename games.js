@@ -52,7 +52,8 @@ function insereJogo(){
 function insereMensagem(){	
 	var i_tit = document.getElementById('i_tit').value;
 	var i_msg = document.getElementById('i_msg').value;
-	var i_rem = document.getElementById('listaRemetentes').value;	
+	var i_rem = document.getElementById('listaRemetentes');
+	i_rem = i_rem.options[i_rem.selectedIndex].text;	
 	
 	//limpeza dos campos do form
 	document.getElementById('i_tit').value = '';

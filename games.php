@@ -1,7 +1,7 @@
 <?php
 
 //  ....................................
-//  Games App - Aplicação exemplo em PHP
+//  Games App - Aplicaï¿½ï¿½o exemplo em PHP
 //  ....................................
 
 
@@ -103,6 +103,21 @@ function mostraMensagens(){
 		$con->close();			
 		mostraJogos();
 	}
+	if(@$_REQUEST['action'] == "insMsg")  //insere nova mensagem
+	{
+		$con = conectaDB();
+		// $cod = mysqli_query($con,"SELECT MAX(cod) FROM forum");
+		$titulo = $con->real_escape_string($_REQUEST['titulo']);
+		$usuario = $con->real_escape_string($_REQUEST['remetente']);
+		$codUsuario = mysqli_query($con,"SELECT cod as codUsuarios FROM usuarios WHERE usuarios.nome  =  '$usuario'");
+		$codUsuario = mysqli_fetch_array($codUsuario);
+		$codUsuario = $codUsuario['codUsuarios'];
+		$mensagem = $con->real_escape_string($_REQUEST['mensagem']);	
+		
+		mysqli_query($con,"INSERT INTO forum (codUsuario,titulo,mensagem) VALUES('$codUsuario','$titulo','$mensagem');");
+		$con->close();			
+		mostraMensagens();
+	}
 	if(@$_REQUEST['action'] == "del")     //remove Usuario
 	{
 		$con = conectaDB();
@@ -126,7 +141,7 @@ function mostraMensagens(){
 	{
 		mostraJogos();
 	}
-		if(@$_REQUEST['action'] == "mostraMensagens")
+	if(@$_REQUEST['action'] == "mostraMensagens")
 	{
 		mostraMensagens();
 	}
