@@ -9,21 +9,21 @@ body.n {
 }
 body {
 	font-family: verdana,helvetica;
-	color: #000000;
-	background-color: #cfccf1;
+	color: #cbcbcb;
+	background-color: #151236;
 	font-size: 12px;
 }
 h1 {
 	font-family: verdana,helvetica;
 	font-size: 16px;
 	font-weight: bold;
-	color: #ffffaa;
+	color: darkgray;
 }
 h2 {
 	font-family: verdana,helvetica;
 	font-size: 14px;
 	font-weight: bold;
-	color: #000000;
+	color: #4f698b;
 }
 h3 {
 	font-family: verdana,helvetica;
@@ -33,7 +33,7 @@ h3 {
 }
 td {
 	font-family: verdana,helvetica;
-	color: #000000;
+	color: darkgray;
 	font-size: 11px;
 }
 a {
@@ -43,14 +43,14 @@ a {
 
 .tabv {
 	font-family: verdana,helvetica;
-	color: #000000;
-	background-color: #ffffff;
+	color: #9e9e9e;
+	background-color: #343434;
 	font-weight: plain;
 	font-size: 9pt;
 }
 .tabcab {
 	font-family: verdana,helvetica;
-	color: #ffffff;
+	color: #000000;
 	font-weight: bold;
 	font-size: 9pt;
 }
@@ -62,7 +62,7 @@ a {
 }
 p {
 	font-family: verdana,helvetica;
-	color: #000000;
+	color: darkgray;
 	font-size: 11px;
 }
 .h {
@@ -78,3 +78,24 @@ p {
 	font-size: 12px;
 }
 
+
+
+select {
+    background-color: #0043a7;
+    color: lightgray;
+    margin: 0.5px;
+    border: 1px solid gray;
+}
+
+button {
+    background-color: gray;
+    border: 1.5px solid darkgray;
+    margin: 0.5px;
+}
+
+input {
+    background: #0043a7;
+    border: 1px solid gray;
+    margin: 0.5px;
+    color: lightgray;
+}

@@ -10,20 +10,20 @@ body.n {
 body {
 	font-family: verdana,helvetica;
 	color: #000000;
-	background-color: #cfccf1;
+	background-color: #ffffff;
 	font-size: 12px;
 }
 h1 {
 	font-family: verdana,helvetica;
 	font-size: 16px;
 	font-weight: bold;
-	color: #ffffaa;
+	color: #56d6e4;
 }
 h2 {
 	font-family: verdana,helvetica;
 	font-size: 14px;
-	font-weight: bold;
-	color: #000000;
+	font-weight: 100;
+	color: #757575;
 }
 h3 {
 	font-family: verdana,helvetica;
@@ -44,7 +44,7 @@ a {
 .tabv {
 	font-family: verdana,helvetica;
 	color: #000000;
-	background-color: #ffffff;
+	background-color: #dbfbff;
 	font-weight: plain;
 	font-size: 9pt;
 }
@@ -62,7 +62,7 @@ a {
 }
 p {
 	font-family: verdana,helvetica;
-	color: #000000;
+	color: #929292;
 	font-size: 11px;
 }
 .h {
@@ -78,3 +78,20 @@ p {
 	font-size: 12px;
 }
 
+button {
+    background: whitesmoke;
+    margin: .5px;
+    border: 1.5px solid darkgray;
+}
+
+input {
+    /* border: 1px solid darkgray; */
+    /* margin: 1px; */
+}
+
+select {
+    border: 1px solid darkgray;
+    margin: .5px;
+}
+
+input {}
