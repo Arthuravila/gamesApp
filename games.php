@@ -103,6 +103,17 @@ function mostraMensagens(){
 		$con->close();			
 		mostraJogos();
 	}
+		if(@$_REQUEST['action'] == "insMsg") //insere novo Jogo
+	{
+		$con = conectaDB();
+		$titulo = $con->real_escape_string($_REQUEST['titulo']);
+		$mensagem = $con->real_escape_string($_REQUEST['mensagem']);
+		$remetente = $con->real_escape_string($_REQUEST['remetente']);
+				
+		mysqli_query($con,"INSERT INTO forum (titulo,mensagem,codUsuario) VALUES('$titulo','$mensagem','$remetente');");
+		$con->close();			
+		mostraMensagens();
+	}
 	if(@$_REQUEST['action'] == "del")     //remove Usuario
 	{
 		$con = conectaDB();
