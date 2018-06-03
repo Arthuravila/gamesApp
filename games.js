@@ -18,6 +18,13 @@ function inicializa(){
 	ajaxCall("games.php?action=mostraUsuarios", listaUsuarios);
 	ajaxCall("games.php?action=mostraJogos", listaJogos);
 	ajaxCall("games.php?action=mostraMensagens", listaMensagens);
+	inicializaSelecaoTemas("listaTemas");
+}
+function selectTema(){
+	var x = document.getElementById("listaTemas");
+	var index = x.selectedIndex;
+	var tema = x.options[index].text;
+	var css = document.getElementById('tema_css').href = tema + '.css';
 }
 function insereUsuario(){	
 	var i_use = document.getElementById('i_use').value;
@@ -52,7 +59,8 @@ function insereJogo(){
 function insereMensagem(){	
 	var i_tit = document.getElementById('i_tit').value;
 	var i_msg = document.getElementById('i_msg').value;
-	var i_rem = document.getElementById('listaRemetentes').value;	
+	var i_rem = document.getElementById('listaRemetentes');
+	i_rem = i_rem.options[i_rem.selectedIndex].text;	
 	
 	//limpeza dos campos do form
 	document.getElementById('i_tit').value = '';
@@ -88,6 +96,31 @@ function inicializaSelecaoFabricantes(lisFabricantes){
 }
 function inicializaSelecaoRemetentes(lisRemetentes){  
   inicializaSelecao(lisRemetentes, "listaRemetentes");
+}
+function inicializaSelecaoTemas(lisTemas){
+	var x = document.getElementById(lisTemas);
+
+	var i = 0;
+	var option = document.createElement("option");
+	option.text = "Normal";
+	option.value = i + 1;
+	option.selected = true;
+	x.add(option);
+
+	option = document.createElement("option");
+	option.text = "Dark";
+	option.value = i + 1;
+	x.add(option);
+
+	option = document.createElement("option");
+	option.text = "Light";
+	option.value = i + 1;
+	x.add(option);
+
+	option = document.createElement("option");
+	option.text = "Contrast";
+	option.value = i + 1;
+	x.add(option);
 }
 function listaUsuarios(lisUsuarios){
 	document.getElementById('tab_usuarios').innerHTML = lisUsuarios;
